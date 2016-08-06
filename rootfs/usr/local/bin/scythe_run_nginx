@@ -1,0 +1,4 @@
+#!/bin/sh
+mkdir /run/nginx
+rm -rf /var/www/localhost
+nginx

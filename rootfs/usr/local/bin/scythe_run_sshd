@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# regenerate host keys
+rm -f /etc/ssh/ssh_host_*_key /etc/ssh/ssh_host_*_key.pub
+ssh-keygen -A
+
+# add roots authorized keys
+if test -n "${SSH_PUB_KEY}"; then
+    mkdir -p -m 0700 /root/.ssh && \
+        echo "${SSH_PUB_KEY}" >> /root/.ssh/authorized_keys && \
+        chmod 0400 /root/.ssh/authorized_keys
+fi
+
+/usr/sbin/sshd -D
