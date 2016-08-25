@@ -24,8 +24,8 @@ RUN apk add nginx
 # xvfb and vnc
 RUN apk add xvfb x11vnc@testing ttf-dejavu
 
-# firefox
-RUN apk add firefox-dev@testing firefox
+# xterm
+RUN apk add xterm@testing
 
 # Delete keys. They will be generated again by scythe_sshd
 RUN rm -f /etc/ssh/ssh_host_*_key /etc/ssh/ssh_host_*_key.pub
