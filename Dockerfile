@@ -1,6 +1,6 @@
 FROM gliderlabs/alpine:3.4
 
-MAINTAINER Rene Cunningham <rene@pitchfork.io>
+MAINTAINER Rene Cunningham <rene@compounddata.com>
 
 ENV SSH_PUB_KEY=""
 
