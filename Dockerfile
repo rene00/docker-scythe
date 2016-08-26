@@ -32,4 +32,7 @@ RUN rm -f /etc/ssh/ssh_host_*_key /etc/ssh/ssh_host_*_key.pub
 
 COPY rootfs /
 
+# set filesystem permissions
+RUN chmod 0700 /root
+
 CMD ["/usr/bin/supervisord", "--nodaemon"]
