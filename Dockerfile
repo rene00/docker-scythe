@@ -32,6 +32,12 @@ RUN rm -f /etc/ssh/ssh_host_*_key /etc/ssh/ssh_host_*_key.pub
 
 COPY rootfs /
 
+# prepare nginx 
+RUN mkdir /run/nginx && rm -rf /var/www/localhost
+
+# prepare sshd
+RUN rm -f /etc/ssh/ssh_host_*_key /etc/ssh/ssh_host_*_key.pub
+
 # set filesystem permissions
 RUN chmod 0700 /root
 
