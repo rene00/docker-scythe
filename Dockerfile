@@ -4,8 +4,6 @@ MAINTAINER Rene Cunningham <rene@compounddata.com>
 
 ENV SSH_PUB_KEY=""
 
-ENV VNC_PASSWD=""
-
 RUN echo "@testing http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 
 # apk
